@@ -2,14 +2,12 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   color: #1c1c1c;
 }
 
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,6 +21,52 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  padding: 2em 0;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+.container:before {
+  content: "";
+  width: 3em;
+  height: 3em;
+  background: #1c1c1c;
+  left: 2em;
+  top: 3.1em;
+  position: absolute;
+}
+
+.container:after {
+  content: "...";
+  width: 3em;
+  height: 3em;
+  color: #1c1c1c;
+  font-size: 10em;
+  left: 0.2em;
+  bottom: -1.7em;
+  position: absolute;
+}
+
+#hr {
+  height: 100vh;
+  width: 3px;
+  background: #1c1c1c;
+  border: none;
+}
+
 /* ========================================================== */
 .left {
   display: -webkit-box;
@@ -33,9 +77,8 @@ body {
       -ms-flex-flow: column;
           flex-flow: column;
   width: 400px;
-  min-height: 100vh;
+  height: 100%;
   padding: 1em 2em;
-  background: white;
 }
 
 .bottom {
@@ -128,7 +171,7 @@ body {
 
 .right {
   width: 800px;
-  min-height: 100vh;
+  height: 100%;
   padding: 1em 2em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -146,5 +189,11 @@ body {
 .italic {
   font-style: italic;
   margin: 9px 0;
+}
+
+.mi,
+.experiencia,
+.conocimiento {
+  width: 75%;
 }
 /*# sourceMappingURL=style.css.map */
